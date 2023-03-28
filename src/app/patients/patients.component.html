@@ -1,0 +1,80 @@
+    <div class="container">
+    <div class="border">
+      <button class="btn btn-md btn-outline-primary">
+        <i class="fa-regular fa-user"></i>Nouveau Patient</button>
+    </div>
+        <div class="card">
+          <div class="card-header">LISTE DES PATIENT</div>
+          <div class="col-md-4 text-right">
+        <div class="card-body">
+            <table class="table table-bordered table-striped">
+                <thead>
+
+                    <tr>
+                        <th>
+                            codep
+                        </th>
+                        <th>
+                            nomp
+                        </th>
+                        <th>
+                            prenom
+                        </th>
+                        <th>
+                            email
+                        </th>
+                        <th>
+                            tel
+                        </th>
+                        <th>
+                            sexe
+                        </th>
+                        <th>
+                            datenaissance
+                        </th>
+                        <th>
+                            adresse
+                        </th>
+                    </tr>
+                    </thead>
+
+                <tbody>
+                   <tr *ngFor="let p of patients">
+                        <td><span>{{p.codep}}</span></td>
+                        <td><span>{{p.nomp}}</span></td>
+                        <td><span>{{p.prenom}}</span></td>
+                         <td><span>{{p.email}}</span></td>
+                        <td><span>{{p.tel}}</span></td>
+                         <td><span>{{p.sexe}}</span></td>
+                        <td><span>{{p.datenaissance}}</span></td>
+                        <td><span>{{p.adresse}}</span></td>
+                        <td>
+                          <button (click)="handleDeletePatient(p)" class="btn btn-danger">
+                            <i class="bi bi-trash"></i>
+                          </button>
+
+                        </td>
+                        <td>
+                            <button class="btn btn-sm btn-warning">
+                              <i class="fas fa-edit"></i>
+                            </button>
+
+                        </td>
+                   </tr>
+                </tbody>
+
+            </table>
+            </div>
+            </div>
+            </div>
+             <!-- <div class="border">
+
+      </div> -->
+
+      <!-- <ng-template #erros>
+        <div class="text-danger">{{errorMessage}}</div>
+      </ng-template> -->
+      <!-- /*ngIf="patients; else erros*/ -->
+
+
+
