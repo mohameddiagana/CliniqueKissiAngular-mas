@@ -1,22 +1,51 @@
- <div class="container my-container">
-  <div class="card justify-content-md-center">
-    <div class="card-header text-center">
-      Se Connecter
-    </div>
 
-    <div class="card-body">
-      <div class="mb-3">
-        <input type="username" class="form-control"  placeholder="username">
-      </div>
-      <div class="mb-3">
-        <input type="password" class="form-control"  placeholder="password">
-      </div>
-      <div class="mb-3 d-flex justify-content-between">
-        <a  [routerLink]="['/inscription']" class="btn btn-link">s'inscrire</a>
-        <button type="button" class="btn btn-primary">
-          <i class="fa-solid fa-check"></i>&nbsp;se connecter</button>
+<!--<div class="container-fluid">-->
+<!--  <div class="row">-->
+<!--    <div class="col-12">-->
+<!--      <form [formGroup]="loginForm" (ngSubmit)="login()">-->
 
-      </div>
-    </div>
-</div>
-</div>
+<!--        <div class="form-group">-->
+<!--          <label for="email" class='fa fa-envelope'></label>-->
+<!--          <input type="email" id="email" placeholder="Email Address" formControlName="email">-->
+<!--          <span class="text-danger" *ngIf="loginForm.controls.email.errors && loginForm.controls.email.touched"><br>Invalid Email Address</span>-->
+<!--        </div>-->
+
+<!--        <div class="form-group">-->
+<!--          <label for="password" class="fa fa-lock"></label>-->
+<!--          <input type="password" id="password" placeholder="Password" formControlName="password">-->
+<!--          <span class="text-danger" *ngIf="loginForm.controls.password.errors && loginForm.controls.password.touched"><br>Invalid Password</span>-->
+<!--        </div>-->
+
+<!--        <div class="text-center">-->
+<!--          <button id="submitButton" type="submit" class="btn btn-primary" [disabled]="!loginForm.valid">Login</button>-->
+<!--        </div>-->
+<!--        <div class="text-center text-success" *ngIf="successMessage">{{successMessage}}</div>-->
+
+<!--      </form>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->
+
+
+<!--&lt;!&ndash;<div class="container my_container">&ndash;&gt;-->
+<!--&lt;!&ndash;  <div class="card justify-content-md-center">&ndash;&gt;-->
+<!--&lt;!&ndash;    <div class="card-header text-center">&ndash;&gt;-->
+<!--&lt;!&ndash;      Se Connecter&ndash;&gt;-->
+<!--&lt;!&ndash;    </div>&ndash;&gt;-->
+
+<!--&lt;!&ndash;    <div class="card-body">&ndash;&gt;-->
+<!--&lt;!&ndash;      <div class="mb-3">&ndash;&gt;-->
+<!--&lt;!&ndash;        <input type="username" class="form-control"  placeholder="username">&ndash;&gt;-->
+<!--&lt;!&ndash;      </div>&ndash;&gt;-->
+<!--&lt;!&ndash;      <div class="mb-3">&ndash;&gt;-->
+<!--&lt;!&ndash;        <input type="password" class="form-control"  placeholder="password">&ndash;&gt;-->
+<!--&lt;!&ndash;      </div>&ndash;&gt;-->
+<!--&lt;!&ndash;      <div class="mb-3 d-flex justify-content-between">&ndash;&gt;-->
+<!--&lt;!&ndash;        <a  [routerLink]="['/login']" class="btn btn-link">s'inscrire</a>&ndash;&gt;-->
+<!--&lt;!&ndash;        <button type="button" class="btn btn-primary">&ndash;&gt;-->
+<!--&lt;!&ndash;          <i class="fa-solid fa-check"></i>&nbsp;se connecter</button>&ndash;&gt;-->
+
+<!--&lt;!&ndash;      </div>&ndash;&gt;-->
+<!--&lt;!&ndash;    </div>&ndash;&gt;-->
+<!--&lt;!&ndash;  </div>&ndash;&gt;-->
+<!--&lt;!&ndash;</div>&ndash;&gt;-->

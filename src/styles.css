@@ -2,8 +2,29 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
 @import "~bootstrap-icons/font/bootstrap-icons.css";
 
-#myicon{
-  font-size: 13px;
-  margin-right: 13px;
+.container{
+  margin-top: 4px;
 }
+.border{
+  padding: 10px;
+}
+.btn{
+  margin-right: 4px;
+}
+#myicon #myicon1{
+  font-size: 40px;
+  margin-right: 10px;
+}
+.fa-edit{
+  font-size: 5px;
+  margin-right: 10px;
+  padding: 0px;
+}
+table .btn{
+  margin: 2px;
+}
+.fa{
+  font-size: 12px;
+}
+
 

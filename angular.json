@@ -70,10 +70,12 @@
           "configurations": {
             "production": {
               "browserTarget": "cliniqueKissiFront:build:production"
+
             },
             "development": {
               "browserTarget": "cliniqueKissiFront:build:development"
-            }
+            },
+
           },
           "defaultConfiguration": "development"
         },
