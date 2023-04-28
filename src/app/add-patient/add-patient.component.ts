@@ -11,17 +11,17 @@ import {Patient} from "../patient";
 })
 export class AddPatientComponent implements OnInit {
   patient: Patient = new Patient();
- //  idpatient: number =0;
- //  codep: String ='';
- //  nomp: String ='';
- //  prenom: String ='';
- //  email: String ='';
- //  tel: String ='';
- //  sexe: String ='';
- // // datenaissance: Date= '';
- //  profession: String ='';
- //  CIN: number =0;
- //  age: number =0;
+  // idpatient: number =0;
+  // codep: String ='';
+  // nomp: String ='';
+  // prenom: String ='';
+  // email: String ='';
+  // tel: String ='';
+  // sexe: String ='';
+  // datenaissance: Date= '';
+  // profession: String ='';
+  // CIN: number =0;
+  // age: number =0;
   constructor( private patientService: PatientService,private router: Router) { }
 
   ngOnInit(): void {

@@ -11,7 +11,7 @@ import {Patient} from "../patient";
 })
 export class PatientService {
 
-  readonly API_URL = "http://localhost:7075/api/v1/auth/"
+  readonly API_URL = "http://localhost:7075/api/v1/auth"
 
   readonly ENDPOINT_PATIENTS = "/patient/liste"
  //  private patients!: [];

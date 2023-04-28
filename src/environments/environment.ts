@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  host: "http://localhost:4200/api/v1/auth/patient/liste"
+  // host: "http://localhost:4200/api/v1/auth/patient/liste"
 };
 
 /*
