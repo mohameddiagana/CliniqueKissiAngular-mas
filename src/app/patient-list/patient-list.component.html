@@ -1,0 +1,59 @@
+<div class="container">
+  <div class="border">
+    <button (click)="NouveauPatient()" class="btn btn-md btn-outline-primary">
+      <i class="fa-regular fa-user"></i>NouveauPatient</button>
+  </div>
+  <div class="card">
+    <div class="card-header">LISTE DES PATIENT</div>
+    <div class="col-md-4 text-right">
+      <div class="card-body">
+        <table class="table table-bordered table-striped">
+          <thead>
+          <tr>
+            <th>idpatient</th>
+            <th>codep</th>
+            <th>nomp</th>
+            <th>prenom</th>
+            <th>email</th>
+            <th>tel</th>
+            <th>sexe</th>
+            <th>datenaissance</th>
+            <th>adresse</th>
+            <th>profession</th>
+            <th>CIN</th>
+            <th>age</th>
+            <th>ACTION</th>
+            <th>ACTION</th>
+
+          </tr>
+          </thead>
+
+          <tbody>
+          <tr *ngFor="let p of patients">
+            <td><span>{{p.idpatient}}</span></td>
+            <td><span>{{p.codep}}</span></td>
+            <td><span>{{p.nomp}}</span></td>
+            <td><span>{{p.prenom}}</span></td>
+            <td><span>{{p.email}}</span></td>
+            <td><span>{{p.tel}}</span></td>
+            <td><span>{{p.sexe}}</span></td>
+            <td><span>{{p.datenaissance}}</span></td>
+            <td><span>{{p.adresse}}</span></td>
+            <td><span>{{p.profession}}</span></td>
+            <td><span>{{p.CIN}}</span></td>
+            <td><span>{{p.age}}</span></td>
+            <td>
+              <button (click)="updatepatient(p.idpatient)" class="btn btn-info">Update</button>
+              <button (click)="deletepatient(p.idpatient)" class="btn btn-danger">Delete</button>
+            </td>
+
+          </tr>
+          </tbody>
+
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+

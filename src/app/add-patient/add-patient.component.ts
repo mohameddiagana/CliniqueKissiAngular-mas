@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {PatientService} from "../services/patient.service";
 import {Router} from "@angular/router";
+import {Patient} from "../patient";
 
 @Component({
   selector: 'app-add-patient',
@@ -9,36 +10,48 @@ import {Router} from "@angular/router";
   styleUrls: ['./add-patient.component.css']
 })
 export class AddPatientComponent implements OnInit {
-  patientformGroup?: FormGroup
-  constructor(private  fb: FormBuilder, private patientService: PatientService,private router: Router) { }
+  patient: Patient = new Patient();
+ //  idpatient: number =0;
+ //  codep: String ='';
+ //  nomp: String ='';
+ //  prenom: String ='';
+ //  email: String ='';
+ //  tel: String ='';
+ //  sexe: String ='';
+ // // datenaissance: Date= '';
+ //  profession: String ='';
+ //  CIN: number =0;
+ //  age: number =0;
+  constructor( private patientService: PatientService,private router: Router) { }
 
   ngOnInit(): void {
-    this.patientformGroup = this.fb.group({
-      idpatient:[0,Validators.required],
-      codep:["",Validators.required],
-      nomp:["",Validators.required],
-      prenom:["",Validators.required],
-      email:["",Validators.required],
-      tel:["",Validators.required],
-      sexe:["",Validators.required],
-      datenaissance:["",Validators.required],
-      adresse:["",Validators.required],
-      profession:["",Validators.required],
-      CIN:["",Validators.required],
-      age:["",Validators.required],
-    })
   }
 
-  OneSavePatient() {
-  this.patientService.Enregistrer(this.patientformGroup?.value)
-    .subscribe(data=>{
-      alert("Succes Saving Patient");
-    })
+  EnregistrerPatient(){
+    this.patientService.NouveauPatient(this.patient).subscribe(data=>{
+     console.log(data)
+      this.goToPatientList();
+
+    },
+      error => console.log(error));
 
   }
-  Enregistrer(){
+  goToPatientList(){
+    this.router.navigate(['/patient-list']);
+  }
+
+
+  onSubmit() {
+    console.log(this.patient);
+    this.EnregistrerPatient();
 
   }
 
+  // OneSavePatient() {
+  //   // @ts-ignore
+  //   this.patientService.NouveauPatient(this.onSubmit)
+  //     .subscribe(data=>{
+  //       alert("Succes Saving Patient");
+  //     })
 
 }

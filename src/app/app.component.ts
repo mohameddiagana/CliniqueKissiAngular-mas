@@ -15,11 +15,11 @@ export class AppComponent  implements OnInit{
 
   constructor(private  patientService: PatientService) {
   }
-  ngOnInit() {}
-  //   console.log('on init patient...........')
-  //   this.patientService.Getlist_patients().subscribe((datas:any) =>{
-  //     this.patients = datas
-  //   })
-  // }
+  ngOnInit() {
+    console.log('Enregistre on  init patient...........')
+    this.patientService.getPatientList().subscribe((data) =>{
+      this.patients = data
+    })
+  }
 
 }
