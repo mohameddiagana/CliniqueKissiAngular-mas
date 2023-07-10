@@ -8,6 +8,7 @@ import {AddPatientComponent} from "./add-patient/add-patient.component";
 import {PatientListComponent} from "./patient-list/patient-list.component";
 import {UpdatePatientComponent} from "./update-patient/update-patient.component";
 
+
 const routes: Routes = [
   {path:"rendez-vous", component : RendezVousComponent},
   {path:"medecins", component : MedecinsComponent},

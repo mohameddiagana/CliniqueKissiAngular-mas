@@ -1,64 +1,150 @@
 <div class="col-md-8 offset-md-2">
 <h3>Nouveau Patient</h3>
-<form (ngSubmit)="onSubmit()">
+<form novalidate (ngSubmit)="onSubmit()">
   <div class="form-group">
     <label>Idpatient</label>
-    <input type="text" class="form-control" id="idpatient" >
+    <input type="text" class="form-control"  formControlName="idpatient" required>
   </div>
 
   <div class="form-group">
     <label>Codep</label>
-    <input type="text" class="form-control" id="codep" [(ngModel)]="patient.codep" name="codep" >
+    <input type="text" class="form-control" id="codep" [(ngModel)]="patient.codep" placeholder="codep" name="codep" required
+    #codepVar=[ngmodel]
+    ngClass="{'is-invalid' : codepVar.touched && !codepVar.valid}">
+    <div class="invalid-feedback">
+      <span *ngIf="codepVar.errors">
+        Entrer codep
+
+      </span>
+    </div>
   </div>
 
   <div class="form-group">
     <label>Nomp</label>
-    <input type="text" class="form-control" id="nomp" [(ngModel)]="patient.nomp" name="nomp">
+    <input type="text" class="form-control" id="nomp"placeholder="nomp" [(ngModel)]="patient.nomp" name="nomp" required
+           #nompVar="ngModel"
+           [ngClass]="{'is-invalid' : nompVar.touched && !nompVar.valid}">
+    <div class="invalid-feedback">
+      <span *ngIf="nompVar.errors">
+        Entrer nomp
+
+      </span>
+    </div>
+
   </div>
 
   <div class="form-group">
     <label>Prenom</label>
-    <input type="text" class="form-control" id="prenom" [(ngModel)]="patient.prenom" name="prenom">
+    <input type="text" class="form-control" id="prenom" [(ngModel)]="patient.prenom"placeholder="prenom" name="prenom" required
+           #prenomVar="ngModel"
+           [ngClass]="{'is-invalid' : prenomVar.touched && !prenomVar.valid}">
+    <div class="invalid-feedback">
+      <span *ngIf="prenomVar.errors">
+        Entrer prenom
+
+      </span>
+    </div>
   </div>
 
   <div class="form-group">
     <label>Email</label>
-    <input type="text" class="form-control" id="email" [(ngModel)]="patient.email" name="email">
+    <input type="text" class="form-control" id="email" [(ngModel)]="patient.email"placeholder="email" name="email" required
+           #emailVar="ngModel"
+           [ngClass]="{'is-invalid' : emailVar.touched && !emailVar.valid}">
+    <div class="invalid-feedback">
+      <span *ngIf="emailVar.errors">
+        Entrer email
+
+      </span>
+    </div>
   </div>
 
   <div class="form-group">
     <label>Telephone</label>
-    <input type="text" class="form-control" id="tel" [(ngModel)]="patient.tel" name="tel">
+    <input type="text" class="form-control" id="tel"
+           [(ngModel)]="patient.tel" placeholder="Telephone" name="tel"required
+           #telVar="ngModel"
+           [ngClass]="{'is-invalid' : telVar.touched && !telVar.valid}">
+    <div class="invalid-feedback">
+      <span *ngIf="telVar.errors">
+        Entrer Telephone
+      </span>
+
+    </div>
   </div>
 
-  <div class="form-group">
-    <label>Sexe</label>
-    <input type="text" class="form-control" id="sexe" [(ngModel)]="patient.sexe" name="tel">
-  </div>
+    <div class="form-group">
+      <label for="gender">Sexe :</label>
+      <select id="gender" name="gender"
+              [(ngModel)]="selectedGender">
+        <option value="M">Homme</option>
+        <option value="F">Femme</option>
+      </select>
+    </div>
 
   <div class="form-group">
     <label>Datenaissance</label>
-    <input type="date" class="form-control" id="datenaissance" [(ngModel)]="patient.datenaissance" name="datenaissance">
+    <input type="date" class="form-control" id="datenaissance" [(ngModel)]="patient.datenaissance" placeholder="datenaissance" name="datenaissance" required
+           #datenaissanceVar="ngModel"
+           [ngClass]="{'is-invalid' : datenaissanceVar.touched && !datenaissanceVar.valid}">
+    <div class="invalid-feedback">
+      <span *ngIf="datenaissanceVar.errors">
+        Entrer datenaissance
+
+      </span>
+    </div>
   </div>
 
   <div class="form-group">
     <label>Adresse</label>
-    <input type="text" class="form-control" id="adresse" [(ngModel)]="patient.adresse" name="adresse">
+    <input type="text" class="form-control" id="adresse" [(ngModel)]="patient.adresse" placeholder="adresse" name="adresse" required
+           #adresseVar="ngModel"
+           [ngClass]="{'is-invalid' : adresseVar.touched && !adresseVar.valid}">
+    <div class="invalid-feedback">
+      <span *ngIf="adresseVar.errors">
+        Entrer adresse
+
+      </span>
+    </div>
   </div>
 
   <div class="form-group">
     <label>Profession</label>
-    <input type="text" class="form-control" id="profession" [(ngModel)]="patient.profession" name="profession">
+    <input type="text" class="form-control" id="profession" [(ngModel)]="patient.profession" placeholder="profession" name="profession"required
+           #professionVar="ngModel"
+           [ngClass]="{'is-invalid' : prenomVar.touched && !professionVar.valid}">
+    <div class="invalid-feedback">
+      <span *ngIf="professionVar.errors">
+        Entrer profession
+
+      </span>
+    </div>
   </div>
 
   <div class="form-group">
     <label>CIN</label>
-    <input type="text" class="form-control" id="CIN" [(ngModel)]="patient.CIN" name="CIN">
+    <input type="text" class="form-control" id="CIN" [(ngModel)]="patient.CIN" placeholder="CIN" name="CIN" required
+           #CINVar="ngModel"
+           [ngClass]="{'is-invalid' :CINVar.touched && !CINVar.valid}">
+    <div class="invalid-feedback">
+      <span *ngIf="CINVar.errors">
+        Entrer CIN
+
+      </span>
+    </div>
   </div>
 
   <div class="form-group">
     <label>Age</label>
-    <input type="text" class="form-control" id="age" [(ngModel)]="patient.age" name="age">
+    <input type="text" class="form-control" id="age" [(ngModel)]="patient.age" placeholder="age" name="age" required
+           #ageVar="ngModel"
+           [ngClass]="{'is-invalid' : ageVar.touched && !ageVar.valid}">
+    <div class="invalid-feedback">
+      <span *ngIf="ageVar.errors">
+        Entrer age
+
+      </span>
+    </div>
   </div>
   <button type="submit" class="btn btn-success">Enregistrer</button>
 </form>

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { PatientService } from './services/patient.service'
+import {FormsModule,ReactiveFormsModule} from "@angular/forms";
 import {OnInit} from "@angular/core";
 
 

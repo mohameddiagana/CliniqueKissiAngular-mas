@@ -2,7 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {PatientService} from "../services/patient.service";
 import {Router} from "@angular/router";
-import {Patient} from "../patient";
+import {Patient} from "../Model/patient";
+import {FormsModule,ReactiveFormsModule} from "@angular/forms";
 
 @Component({
   selector: 'app-add-patient',
@@ -10,6 +11,8 @@ import {Patient} from "../patient";
   styleUrls: ['./add-patient.component.css']
 })
 export class AddPatientComponent implements OnInit {
+  sexeList: string[] = ["homme","femme"]
+
   patient: Patient = new Patient();
   // idpatient: number =0;
   // codep: String ='';
@@ -22,10 +25,15 @@ export class AddPatientComponent implements OnInit {
   // profession: String ='';
   // CIN: number =0;
   // age: number =0;
-  constructor( private patientService: PatientService,private router: Router) { }
+
+
+  constructor( private patientService: PatientService,private router: Router,
+    private FormBuilder: FormBuilder) { }
 
   ngOnInit(): void {
+
   }
+
 
   EnregistrerPatient(){
     this.patientService.NouveauPatient(this.patient).subscribe(data=>{
@@ -41,17 +49,13 @@ export class AddPatientComponent implements OnInit {
   }
 
 
+
+
   onSubmit() {
     console.log(this.patient);
     this.EnregistrerPatient();
 
   }
-
-  // OneSavePatient() {
-  //   // @ts-ignore
-  //   this.patientService.NouveauPatient(this.onSubmit)
-  //     .subscribe(data=>{
-  //       alert("Succes Saving Patient");
-  //     })
+  selectedGender = 'M';
 
 }
