@@ -1,3 +1,4 @@
+import { PatientListComponent } from './patient-list/patient-list.component';
 
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -10,7 +11,11 @@ import { MedecinsComponent } from './medecins/medecins.component';
 // import { LoginComponent } from './login/login.component';
 // import { InscriptionComponent } from './inscription/inscription.component';
 import { ServiceComponent } from './service/service.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { UpdatePatientComponent } from './update-patient/update-patient.component';
+import { AddPatientComponent } from './add-patient/add-patient.component';
+
+
 
 
 @NgModule({
@@ -19,13 +24,18 @@ import { FormsModule } from '@angular/forms';
     RendezVousComponent,
     MedecinsComponent,
     ServiceComponent,
+    PatientListComponent,
+    UpdatePatientComponent,
+    AddPatientComponent,
+
 
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
 
 
 

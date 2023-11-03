@@ -9,7 +9,7 @@
   <div class="form-group">
     <label>Codep</label>
     <input type="text" class="form-control" id="codep" [(ngModel)]="patient.codep" placeholder="codep" name="codep" required
-    #codepVar=[ngmodel]
+    #codepVar="ngModel"
     ngClass="{'is-invalid' : codepVar.touched && !codepVar.valid}">
     <div class="invalid-feedback">
       <span *ngIf="codepVar.errors">

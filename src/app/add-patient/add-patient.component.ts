@@ -50,7 +50,6 @@ export class AddPatientComponent implements OnInit {
 
 
 
-
   onSubmit() {
     console.log(this.patient);
     this.EnregistrerPatient();
