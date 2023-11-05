@@ -12,13 +12,11 @@ import {UpdatePatientComponent} from "./update-patient/update-patient.component"
 const routes: Routes = [
   {path:"rendez-vous", component : RendezVousComponent},
   {path:"medecins", component : MedecinsComponent},
-  {path:"add-pateint", component: AddPatientComponent}
 
-  {path:"NouveauPatient", component : AddPatientComponent},
+  {path:"NouveauPatient", component: AddPatientComponent},
   {path:"patient-list", component : PatientListComponent},
 
   {path:"update-patient/idpatient", component : UpdatePatientComponent},
-
 
 ];
 

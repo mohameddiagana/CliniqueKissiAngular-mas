@@ -15,7 +15,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { UpdatePatientComponent } from './update-patient/update-patient.component';
 import { AddPatientComponent } from './add-patient/add-patient.component';
 
-
+/**
+ * date 02/11/2023
+ * propriete Mohamed DIAGANA
+ */
 
 
 @NgModule({
